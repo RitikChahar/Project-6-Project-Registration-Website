@@ -4,7 +4,6 @@ const baseUrl = "http://127.0.0.1:8000/";
 
 function submitFormToAPI(event) {
   event.preventDefault(); 
-
   const loader = document.getElementById("resume-loader");
   loader.style.display = "inline-block";
   const resume_form = document.getElementById("form-container-3");
@@ -45,11 +44,9 @@ function submitFormToAPI(event) {
 `;
       targetDiv.style.visibility = "visible";
       targetDiv.appendChild(newContentContainer);
-      console.log("API response:", data);
   })
   .catch(error => {
       loader.style.display = "none";
-      console.error("API error:", error);
   });
 }
 
@@ -62,6 +59,7 @@ function handleOTPSubmission(event) {
 
   const otp_form = document.getElementById("form-container-2");
   const resume_form = document.getElementById("form-container-3");
+  const footer = document.getElementById("footer");
 
   const payload = {
     uid: storedUid,
@@ -106,17 +104,16 @@ function handleOTPSubmission(event) {
             <span class="loader" id="resume-loader"></span>
         </form>
 `;
+        footer.style.display = 'none';
         resume_form.style.visibility = "visible";
         targetDiv.appendChild(newContentContainer);
       } else {
         alert("OTP is Incorrect!");
 
       }
-      console.log("OTP Verification Response:", data);
     })
     .catch((error) => {
       loader.style.display = "none";
-      console.error("Error:", error);
     });
 }
 
@@ -143,7 +140,6 @@ function submitForm(event) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log("Response:", data);
       loader.style.display = "none";
       if (data["status"] == false) {
         loader.style.display = "none";
@@ -183,7 +179,6 @@ function submitForm(event) {
       }
     })
     .catch((error) => {
-      console.error("Error:", error);
       loader.style.display = "none";
     });
 }
@@ -198,3 +193,7 @@ function movetoNext(current, nextFieldID) {
     document.getElementById(nextFieldID).focus();
   }
 }
+
+$(window).on("load", function (){
+  $(".loading").fadeOut(2000);
+} );

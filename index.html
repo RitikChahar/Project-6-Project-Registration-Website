@@ -5,13 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon" />
+    <link rel="SHORTCUT ICON" href="/static/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/styles/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/static/scripts/index.js"></script>
     <title>Registration</title>
 </head>
 
 <body oncontextmenu="return false;">
+    <div class="loading">
+        <div class="loading-text">
+            <span class="loading-text-words">L</span>
+            <span class="loading-text-words">O</span>
+            <span class="loading-text-words">A</span>
+            <span class="loading-text-words">D</span>
+            <span class="loading-text-words">I</span>
+            <span class="loading-text-words">N</span>
+            <span class="loading-text-words">G</span>
+        </div>
+    </div>
     <div class="form-container form-container-1" id="form-container-1">
         <span class="loader" id="loader"></span>
         <form id="uid-form">
@@ -32,7 +44,7 @@
     </div>
     <div class="form-container-3" id="form-container-4">
     </div>
-    <div class="footer">
+    <div class="footer" id="footer">
         <div class="icons">
             <img class="icon" src="/static/images/linkedin.png"
                 onclick="window.open('https://www.linkedin.com/in/ritick-kumar-49292b224/')"></img>
@@ -46,5 +58,5 @@
                 onclick="window.open('http://127.0.0.1:8000/social-media/?platform=email')"></img>
         </div>
     </div>
-</div>
+    </div>
 </body>
