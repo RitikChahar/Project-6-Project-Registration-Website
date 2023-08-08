@@ -6,7 +6,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	border-radius: 0%;
-	background-image: url('https://ritikchahar.github.io/Project-6-Project-Registration-Website/static/images/1.jpg');
+	background-image: url('/static/images/1.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 100vh;
@@ -22,7 +22,7 @@ body {
 
 @font-face {
 	font-family: 'AstroSpace';
-	src: URL('https://ritikchahar.github.io/Project-6-Project-Registration-Website/static/fonts/AstroSpace-0Wl3o.otf') format('opentype');
+	src: URL('/static/fonts/AstroSpace-0Wl3o.otf') format('opentype');
 }
 
 .loader {
@@ -220,6 +220,7 @@ body {
 .form-container-2 {
 	visibility: hidden;
 }
+
 .form-container-3 {
 	visibility: hidden;
 }
@@ -290,7 +291,7 @@ select:focus {
 	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-input[type = "file"]{
+input[type="file"] {
 	width: 100%;
 	padding: 10px;
 	margin-bottom: 15px;
@@ -307,10 +308,12 @@ input[type = "file"]{
 textarea {
 	resize: vertical;
 }
-.form-container-4{
+
+.form-container-4 {
 	visibility: hidden;
 }
-.thanking-message{
+
+.thanking-message {
 	padding: 25px;
 	align-self: center;
 	font-family: 'AstroSpace';
@@ -319,4 +322,36 @@ textarea {
 	color: #fff;
 	text-shadow: rgb(1 27 172) 0px 0px 87px;
 	text-transform: capitalize;
+}
+
+.footer {
+	border-radius: 0%;
+	height: 8vh;
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	z-index: 1000;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon {
+	margin: 5px;
+	padding: 5px;
+	border-radius: 100%;
+	min-width: 30px;
+	max-width: 30px;
+	filter: invert(1) drop-shadow(0 0 1rem rgba(237, 237, 237, 0.9));
+}
+
+.icon:hover {
+	transform: scale(1.1);
+	transition: transform 1s;
+	transform: scale(1.1);
 }

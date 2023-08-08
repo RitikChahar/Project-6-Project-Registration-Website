@@ -110,3 +110,25 @@ def get_all_details(request):
             })
     else:
         return HttpResponse("Method Not Allowed")   
+
+@csrf_exempt
+def get_social_media(request):
+    platform = str( request.GET.get('platform'))
+    if (platform == "email"):
+        response = {
+            "platform":"gmail",
+            "account":"ritickchahar@gmail.com",
+            "success":True
+        }
+    elif(platform == "discord"):
+        response = {
+            "platform":"discord",
+            "account":"ritikchahar",
+            "success":True
+        }
+    else:
+        response = {
+            "success":False,
+            "message":f"{platform} is not a valid platform"
+        }
+    return JsonResponse(response)
