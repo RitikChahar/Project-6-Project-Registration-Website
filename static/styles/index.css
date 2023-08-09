@@ -6,7 +6,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	border-radius: 0%;
-	background-image: url('/static/images/1.jpg');
+	background-image: url('https://ritikchahar.github.io/Project-6-Project-Registration-Website/static/images/1.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 100vh;
@@ -22,7 +22,7 @@ body {
 
 @font-face {
 	font-family: 'AstroSpace';
-	src: URL('/static/fonts/AstroSpace-0Wl3o.otf') format('opentype');
+	src: URL('https://ritikchahar.github.io/Project-6-Project-Registration-Website/static/fonts/AstroSpace-0Wl3o.otf') format('opentype');
 }
 
 .loader {
