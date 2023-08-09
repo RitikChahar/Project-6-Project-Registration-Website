@@ -26,6 +26,7 @@ function submitFormToAPI(event) {
   const apiUrl = `${baseUrl}upload-resume/`; 
   fetch(apiUrl, {
     method: "POST",
+     referrerPolicy: "unsafe_url",
     headers: {
       "Content-Type": "application/json",
     },
@@ -67,6 +68,7 @@ function handleOTPSubmission(event) {
   };
   fetch(`${baseUrl}verify-otp/`, {
     method: "POST",
+     referrerPolicy: "unsafe_url",
     headers: {
       "Content-Type": "application/json",
     },
@@ -133,6 +135,7 @@ function submitForm(event) {
 
   fetch(`${baseUrl}register/`, {
     method: "POST",
+     referrerPolicy: "unsafe_url",
     headers: {
       "Content-Type": "application/json",
     },
