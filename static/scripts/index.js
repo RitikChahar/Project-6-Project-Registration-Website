@@ -1,6 +1,6 @@
 let storedUID;
 let userName;
-const baseUrl = "http://192.168.1.7:8000/";
+const baseUrl = "https://cu.dev-fiko.in.net/";
 
 function submitFormToAPI(event) {
   event.preventDefault(); 
